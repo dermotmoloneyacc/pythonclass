@@ -38,8 +38,8 @@ def main():
     #PRINT THE REST OF THE OUTPUT
     print("SUM= ",sumx)
     outfile.write("SUM= " + str(sumx))
-    print("Average = ", xbar)
-    print ("Standard Deviation = ",std)
+    print("AVERAGE = ", xbar)
+    print ("standard deviation = ",std)
     print ("STD score = ",SD2)
     #close file
     infile.close
@@ -79,7 +79,7 @@ def OUTDATA(file, A,B,C,D):
     K=0
     while(K<N):
             print(A[K],B[K],C[K],D[K])
-            file.write(str(A[K]) + " \t" + str(B[K]) + " \t" + str(C[K]) + " \t" + str(D[K]) + " \n")
+            file.write(str(A[K]) + str(B[K]) + str(C[K]) + str(D[K]))
             K=K+1
 
 
