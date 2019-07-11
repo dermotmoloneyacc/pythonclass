@@ -28,8 +28,8 @@ def main():
     #ratings(outfile, restname, rating)
     health(outfile, restname, foodtype)
     # closefiles
-    # infile.close()
-    # outfile.close()
+    infile.close()
+    outfile.close()
 
 
 # functions
@@ -50,12 +50,13 @@ def loadx(file, A, B, C, D, E):
 def creditcard(file, A, B):
     # local variable
     K = 0
-    print("Restaurant that accept credit card")
-    file.write("Restaurant that accept credit card \n")
+    print("Restaurants that accept credit cards")
+    file.write("\n")
+    file.write("Restaurants that accept credit cards \n")
     while (K < N):
         if (B[K] == 1):
             print(A[K])
-            file.write(str(A[K]))
+            file.write(str(A[K]) + "\n")
         K = K + 1
 
 
@@ -68,7 +69,7 @@ def stars(file, A, B):
     while (K < N):
         if (B[K] >= 3):
             print(A[K])
-            file.write(str(A[K]))
+            file.write(str(A[K]) + "\n")
         K = K + 1
 
 
@@ -76,13 +77,13 @@ def chinese(file, A, B, C):
     # local variable
     K = 0
     print("\nChinese restaurant that are 3 stars and above ")
+    file.write("\n")
     file.write("Chinese restaurant that are 3 stars and above \n")
     while (K < N):
         if (B[K] == "Chinese") and (C[K] >= 3):
             print(A[K])
-            file.write(str(A[K]))
+            file.write(str(A[K]) + "\n")
         K = K + 1
-
 
 def health(file, A, B):
     # local variable
@@ -92,7 +93,7 @@ def health(file, A, B):
     while (K < N):
         if (B[K] == "Health"):
             print(A[K])
-            file.write(str(A[K]))
+            file.write(str(A[K]) + "\n")
         K = K + 1
 
 
