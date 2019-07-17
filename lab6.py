@@ -102,7 +102,7 @@ def ratings(file, A, B):
     R = 1
     while(R < 5):
         K = 0
-        print(Restaurants with, "R", star rating)
+        print("Restaurants with ", R ," star rating ")
         file.write("\n")
         file.write("Restaurants with " + str(R) + " star rating \n")
         while(K < N):
