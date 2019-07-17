@@ -4,7 +4,8 @@ Hunan,Chinese,0,2,1
 Stringate,Health,0,2,1
 Beijig,Seafood,0,1,1
 Banana Cabana,Beverage,0,1,0
-Seafood,Seafood,0,1,1
-El rancho,Mexican,0,1,0
+Satay,Thai,0,3,0
+El Rancho,Mexican,0,1,0
 Fisherman,Seafood,0,2,1
 Dragon Inn,Chinese,0,3,0
+
