@@ -25,7 +25,7 @@ def main():
     creditcard(outfile, restname, creditcards)
     stars(outfile, restname, rating)
     chinese(outfile, restname, foodtype, rating)
-    #ratings(outfile, restname, rating)
+    ratings(outfile, restname, rating)
     health(outfile, restname, foodtype)
     # closefiles
     infile.close()
@@ -57,15 +57,15 @@ def creditcard(file, A, B):
         if (B[K] == 1):
             print(A[K])
             file.write(str(A[K]) + "\n")
-        K = K + 1
+        K += 1
 
 
 def stars(file, A, B):
     # local variable
-    K=0
-    print("\n3Star Restaurants")
+    K = 0
+    print("3 Star Restaurants")
     file.write("\n")
-    file.write("3Star Restaurants \n")
+    file.write("3 Star Restaurants \n")
     while (K < N):
         if (B[K] >= 3):
             print(A[K])
@@ -76,25 +76,41 @@ def stars(file, A, B):
 def chinese(file, A, B, C):
     # local variable
     K = 0
-    print("\nChinese restaurant that are 3 stars and above ")
+    print("Chinese or Thai restaurants that are 3 stars and above ")
     file.write("\n")
-    file.write("Chinese restaurant that are 3 stars and above \n")
+    file.write("Chinese or Thai restaurants that are 3 stars and above \n")
     while (K < N):
-        if (B[K] == "Chinese") and (C[K] >= 3):
+        if (B[K] == "Chinese" or B[K] == "Thai") and (C[K] >= 3):
             print(A[K])
             file.write(str(A[K]) + "\n")
         K = K + 1
 
+
 def health(file, A, B):
     # local variable
     K = 0
-    print("\nRestaurants that serve health food")
+    print("Restaurants that serve health food")
     file.write("Restaurants that serve health food \n")
     while (K < N):
         if (B[K] == "Health"):
             print(A[K])
             file.write(str(A[K]) + "\n")
         K = K + 1
+
+def ratings(file, A, B):
+    #local variable
+    R = 1
+    while(R < 5):
+        K = 0
+        print(Restaurants with, "R", star rating)
+        file.write("\n")
+        file.write("Restaurants with " + str(R) + " star rating \n")
+        while(K < N):
+            if(B[K] == R):
+                print(A[K])
+                file.write(str(A[K] + "\n"))
+            K=K+1
+        R=R+1
 
 
 main()
