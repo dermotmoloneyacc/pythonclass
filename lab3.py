@@ -52,8 +52,8 @@ def main():
         outfile.write(str(p) + ", \t" + str(ba) + ", \t" + str(sa) + " \n")
         k = k+1
         # close files
-        infile.close
-        outfile.close
+        infile.close()
+        outfile.close()
 
 
 def single(x):

@@ -42,8 +42,8 @@ def main():
     print ("Standard Deviation = ",std)
     print ("STD score = ",SD2)
     #close file
-    infile.close
-    outfile.close
+    infile.close()
+    outfile.close()
 def LOADDATA(infile, A):
     #local variables
     B=0
