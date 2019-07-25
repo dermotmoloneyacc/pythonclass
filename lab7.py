@@ -17,14 +17,17 @@ def main():
     loadrec(infile, idx, score)
     # write unsorted data
     print("UNSORTED DATA")
-    outfile.write("UNSORTED DATA\n")
+    outfile.write("UNSORTED DATA \n")
     OUTDATA(outfile, idx, score)
+    print("\n")
     # call bubble sort
     bubble(idx, score)
     print("SORTED DATA")
     outfile.write("SORTED DATA\n")
     OUTDATA(outfile, idx, score)
+    print("\n")
     infilex = open("lab7bdata.txt", 'r')
+    print("\nrunning binary search\n")
     binary(infilex, idx, score)
     print("Modified Data")
     outfile.write("Modified Data\n")
@@ -87,18 +90,26 @@ def binary(file, A, B):
         idn = 0
         scn = 0
         templist = file.readline().strip("\n").split(",")
-        print(templist)
+        print("templist = ",templist)
+        #print(templist)
         idn = int(templist[0])
         scn = int(templist[1])
-        print(idn)
+        print("idn = ", idn)
+        print("scn = ", scn)
+        print()
+        #print(idn)
         while (low < high) and (flag == 0):
             mid = int((low + high) / 2)
-            print(mid)
+            print("mid = ", mid)
+            print("A[mid] = ", A[mid])
+            print("B[mid] = ", B[mid])
+            print("A[mid], idn = ", A[mid], idn)
             if (A[mid] == idn):
                 # reset flag
                 flag = 1
                 B[mid] = scn
                 print("Search successful")
+                print()
             if (A[mid] < idn):
                 low = mid + 1
             else:
